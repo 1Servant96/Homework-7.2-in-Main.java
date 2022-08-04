@@ -3,18 +3,99 @@
 //import java.sql.SQLOutput;
 //import java.util.Random;
 
-
+/**search the shorcuts of IntelIdea   . If the classes in one package(like com.company) you don't need in public*/
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] rgs) {
         Scanner scanner = new Scanner(System.in);
-        String string = scanner.nextLine();
-        //System.out.println(string.substring(0,2).equals("e"));
-        System.out.println(method(string));
+       Random random = new Random();
+       int a = scanner.nextInt();
+       int[]massive = new int[100];
+       int counter = 0;
+       int i = 0, indexOf = 0;
+        for (int j = 0; j < massive.length; j++) {
+            massive[j]= random.nextInt(1,100);
+        }
+        System.out.println(Arrays.toString(massive));
+        while(i<massive.length){
+            if(a==massive[i]){
+                counter++;
+                indexOf = i;
+                break;
+            }
+            i++;
+        }
+        String result = counter>0 ? "Same number in index: "+ i : "No same number";
+        System.out.println(result);
+
+
+
+        /*Laptop laptop = new Laptop();
+        laptop.weight = 2;
+        laptop.price = 95_000;
+        Person theNursultan = new Person();
+        theNursultan.name = "Nursultan";
+        theNursultan.age =  18;
+        theNursultan.laptop=laptop;
+        System.out.println(theNursultan);*/
+        //System.out.println(laptop);
+
+
+       /* Person person = new Person ();
+        person.nation="kyrgyz";
+        person.dateOfBirth = 18;
+        person.phoneNumber = 999151003;
+        System.out.println(person.nation);
+        System.out.println(person.dateOfBirth);
+        System.out.println( person.phoneNumber);*/
+
+    }
+    static void method01(Person person){
+
     }
 
-    public static boolean method(String string) {
+
+    static int method(){
+        System.out.println("Enter amount of tickets");
+        Scanner scanner = new Scanner(System.in);
+        int amountofTickets = scanner.nextInt();
+        int r = 0;
+        int accepted=0;
+        while(amountofTickets>0 ) {
+            System.out.println("Enter desired number of tickets:" );
+            int x= scanner.nextInt();
+
+            if(amountofTickets>0 ){
+                System.out.println(amountofTickets -= x);
+                accepted++;
+            }
+            else if(amountofTickets-x<0){
+                System.out.println(Math.abs(amountofTickets=x - amountofTickets));
+                r++;
+
+            }
+            //int res = (amountofTickets > 0 && (amountofTickets-=x)>0)? (amountofTickets-=x)+accepted++ :r++  ;
+        }
+        System.out.println("Accepted count of tickets: "+(accepted-=1));
+        System.out.println("Declained count of tickets: "+r);
+        //System.out.println(num);
+
+
+        return r;
+    }
+}
+
+
+
+
+
+
+
+
+    /*public static boolean method(String string) {
         int count = 0;
         for (int i = 0; i < string.length(); i++) {
             if (string.charAt(i) == 'e') {
@@ -23,7 +104,7 @@ public class Main {
         }
         return count >= 1 && count <= 3;
     }
-}
+
          //  if(){ return string.substring(0,2).equals("e");
     /*Scanner scanner= new Scanner(System.in);
     String string= scanner.nextLine();
@@ -264,7 +345,6 @@ public class Main {
 
 
         /*/
-
         /*Scanner scanner = new Scanner(System.in);
         int a;
         Random number = new Random();
@@ -511,10 +591,6 @@ int c =0 ;
 
         lse if (a>0&&a<10000 && a/100>a%100) {
           */
-
-
-
-
         /*for ( int i = 0; i<=10; i++){
 
          System.out.println( "5"+"*"+i+"="+5*i  );
@@ -570,15 +646,10 @@ int c =0 ;
                 System.out.println("Even number: " +number1);
             }
             number1++;*/
+//System.out.println(number1);
 
 
-            //System.out.println(number1);
-
-
-
-
-        //System.out.println(number);
-
+//System.out.println(number);
         /*Scanner value = new Scanner (System.in);
         System.out.println("Enter the two numbers:");
 
@@ -590,10 +661,6 @@ int c =0 ;
         while (number<number1  ) {
             System.out.println(Math.pow(number,2));
             number+=2;*/
-
-
-
-
         /*int number= value.nextInt();
         int score = 0;
         while (number>0)
@@ -712,24 +779,5 @@ int c =0 ;
                     System.out.print( (a/100)+(a/10)+(a)              );
 
                 System.out.println( given.nextInt(100,999) );*/
-
-
-
-
-
-
-
-
-
                 /*System.out.printf (" time is = "+ hour +":"+ minutes + ":" + seconds + ", by changing the time to seconds and summing them up = " +( (hour*3600)+(minutes*60)+seconds )    );
                 System.out.print*/
-
-
-
-
-
-
-
-
-
-
